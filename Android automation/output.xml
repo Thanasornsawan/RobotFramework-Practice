@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220530 19:34:41.952" rpa="false" schemaversion="3">
+<suite id="s1" name="Android" source="D:\tester\Android automation\android.robot">
+<test id="s1-t1" name="Open Test Application for Android" line="31">
+<kw name="Open Test Application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=Test Device</arg>
+<arg>platformVersion=11.0</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=com.material.components</arg>
+<arg>appActivity=com.material.components.activity.MainMenu</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220530 19:34:42.344" endtime="20220530 19:35:00.966"/>
+</kw>
+<status status="PASS" starttime="20220530 19:34:42.343" endtime="20220530 19:35:00.966"/>
+</kw>
+<kw name="Close Popup When App Start">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.material.components:id/bt_close</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220530 19:35:01.045" endtime="20220530 19:35:01.928"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>id=com.material.components:id/bt_close</arg>
+<doc>Tap element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220530 19:35:01.928" endtime="20220530 19:35:02.975"/>
+</kw>
+<status status="PASS" starttime="20220530 19:35:01.044" endtime="20220530 19:35:02.976"/>
+</kw>
+<kw name="Click Search Icon On Topbar">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>accessibility_id=Search</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220530 19:35:02.977" endtime="20220530 19:35:03.953"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>accessibility_id=Search</arg>
+<doc>Tap element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220530 19:35:03.953" endtime="20220530 19:35:07.255"/>
+</kw>
+<status status="PASS" starttime="20220530 19:35:02.976" endtime="20220530 19:35:07.256"/>
+</kw>
+<kw name="Input Search Keyword Into Search Box">
+<arg>Icon</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220530 19:35:07.257" endtime="20220530 19:35:07.323"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>${kw}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220530 19:35:07.327" level="INFO">Typing text 'Icon' into text field 'id=com.material.components:id/search_src_text'</msg>
+<status status="PASS" starttime="20220530 19:35:07.323" endtime="20220530 19:35:08.208"/>
+</kw>
+<status status="PASS" starttime="20220530 19:35:07.256" endtime="20220530 19:35:08.209"/>
+</kw>
+<kw name="Click Bottom Navigation Icon Menu">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220530 19:35:08.211" endtime="20220530 19:35:10.496"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]</arg>
+<doc>Tap element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220530 19:35:10.496" endtime="20220530 19:35:11.279"/>
+</kw>
+<status status="PASS" starttime="20220530 19:35:08.210" endtime="20220530 19:35:11.279"/>
+</kw>
+<status status="PASS" starttime="20220530 19:34:42.342" endtime="20220530 19:35:11.307"/>
+</test>
+<status status="PASS" starttime="20220530 19:34:41.954" endtime="20220530 19:35:11.309"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Android">Android</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
