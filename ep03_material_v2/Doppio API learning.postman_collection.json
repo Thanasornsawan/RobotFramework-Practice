@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "f32a916c-50cb-48d7-8967-b82c500f7a19",
+		"name": "Doppio API learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login to get token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "wAFsqK6nJatkFPCftBIPXmJC0naU7Mnm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"doppio\",\n    \"password\" : \"weBuildBestQa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "-lt7HKdl3bpDIwOKTxSV-cT-hNtA-Fz5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all assets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "pjTOMdECbcBOuJ-JR4WVqloPsGJljwVQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new assets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "6xlSFTJe_DRLIzxabuxmGqPK-p3zUtpH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assetId\": \"a99c\",\n    \"assetName\" : \"Macpro m1\",\n    \"assetType\" : 1,\n    \"inUse\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"assets"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "-lt7HKdl3bpDIwOKTxSV-cT-hNtA-Fz5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify asset",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "8inPTf3pC27lmZQnXSRAa8C5A-rS8MYV"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assetId\": \"a004\",\n    \"assetName\" : \"Macpro m1\",\n    \"assetType\" : 1,\n    \"inUse\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"assets"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "-lt7HKdl3bpDIwOKTxSV-cT-hNtA-Fz5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete asset",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "8inPTf3pC27lmZQnXSRAa8C5A-rS8MYV"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/assets/a004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"assets",
+						"a004"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "-lt7HKdl3bpDIwOKTxSV-cT-hNtA-Fz5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AssetType (no token required)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "XPu6oEJcbCYF6gztWPByseG4kdoOTT8n",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"a\":111\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/assetType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"assetType"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

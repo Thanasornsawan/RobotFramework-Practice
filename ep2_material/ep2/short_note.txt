@@ -1,0 +1,5 @@
+คำสั่งต่างๆ 
+
+adb shell
+
+dumpsys activity activities | grep mResumedActivity

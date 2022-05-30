@@ -1,0 +1,7 @@
+{
+  "deviceName": "Test Device",
+  "platformVersion": "11.0",
+  "platformName": "Android",
+  "appPackage": "com.material.components",
+  "appActivity": "com.material.components.activity.MainMenu"
+}
