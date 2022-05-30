@@ -1,0 +1,5 @@
+- Input Text ----> For Input text into textbox use with <input> 
+- Click Element ----> Click everything <div> <button> <input> , whatever
+- Select From List By Label ----> select value from dropdown  <select>
+- Sleep -----> pause robot for "x" seconds before continue 
+- Open Browser ---->  open browser 
