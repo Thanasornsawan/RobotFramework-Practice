@@ -28,9 +28,15 @@ Click Bottom Navigation Icon Menu
     Tap     xpath=//android.widget.LinearLayout[android.widget.TextView[@text='Bottom Navigation'] and android.widget.TextView[@text='Icon']]
 
 *** Test cases ***
-Open Test Application for Android
+Open Test Application for Android and click Search
     Open Test Application
     Close Popup When App Start    
     Click Search Icon On Topbar
     Input Search Keyword Into Search Box  Icon
     Click Bottom Navigation Icon Menu
+
+Open Test Application for Android and click Card
+    Open Test Application
+    Close Popup When App Start
+    Wait Until Page Contains Element    android=UiSelector().className("android.widget.TextView").text("Cards")     30s
+    Tap     android=UiSelector().className("android.widget.TextView").text("Cards")
