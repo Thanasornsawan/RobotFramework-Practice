@@ -44,5 +44,5 @@ Execution time fast-slow: Accessibility ID > ID > (UISelector, Xpath)
 	main.py (main test cases)
 	page.py (verify the testing page)
   	locator.py (keep any attribute like class,id)
-    element.py
+        element.py (base function for any element use like search that need to wait page to see element)
 ```
