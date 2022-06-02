@@ -35,3 +35,14 @@ The json data meaning..<br/>
 Appium Inspector act as client to sent JSON data to Appium Server for create session. The Appium Server act as middle man that translate JSON data into native framework for both andorid and ios for interacting with that application.But, we also can use robot framework to be client call data to Appium Server.<br/>
 
 Execution time fast-slow: Accessibility ID > ID > (UISelector, Xpath)
+
+### Python Selenium
+> refer: https://selenium-python.readthedocs.io/page-objects.html
+
+```markdown
+/Python Selenium/testcase
+	main.py (main test cases)
+	page.py (verify the testing page)
+  	locator.py (keep any attribute like class,id)
+    element.py
+```
