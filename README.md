@@ -4,7 +4,8 @@ Start robot by `robot {filename.robot}`
 
 ### Web automation
 > require `pip install robotframework` and `pip install robotframework-seleniumlibrary` <br/>
-> Download chrome driver and set into PATH system.
+> Download chrome driver and set into PATH system.<br/>
+> File for test web automation is in folder `ep01_material` for test on localhost <br/>
 - ex00 focus on input text that have unique ID
 - ex01 focus on input text that have custom attribute 'v'
 - ex02 focus on parent tag <div> have custom attribute 'v'
@@ -17,9 +18,11 @@ Start robot by `robot {filename.robot}`
 ### API automation
 > require `pip install robotframework-requests`
 > Run local server by `java -jar doppio_api.jar`
+> File for test web automation is in folder `ep03_material_v2` for test on localhost <br/>
 
 ### Android automation
 > required `pip install robotframework-robotframework-appiumlibrary`
+> File for test web automation is in folder `ep02_material` for test on localhost <br/>
 - Download `Android studio` and then set PATH `ANDROID_HOME` under system (path from SDK Manager)
 - Download `Appmium` and `Appmium Inspector`
 - Download openJDK8 and then set PATH `JAVA_HOME` under system
@@ -46,3 +49,12 @@ Execution time fast-slow: Accessibility ID > ID > (UISelector, Xpath)
   	locator.py (keep any attribute like class,id)
         element.py (base function for any element use like search that need to wait page to see element)
 ```
+
+### Other useful links for practice robot framework
+
+- Material ep01-ep03 is from [Doppio Tech Youtube](https://www.youtube.com/channel/UCmx_h_QeDQmI5SS0maT4lNw/playlists) **Thai language**
+- [https://demoqa.com/automation-practice-form](https://demoqa.com/automation-practice-form)
+- [http://automationpractice.com/index.php](http://automationpractice.com/index.php)
+- [http://the-internet.herokuapp.com/](http://the-internet.herokuapp.com/)
+- [https://phptravels.com/demo](https://phptravels.com/demo)
+- [https://testautomationpractice.blogspot.com/](https://testautomationpractice.blogspot.com/)
