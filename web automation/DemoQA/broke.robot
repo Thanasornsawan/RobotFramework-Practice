@@ -27,7 +27,7 @@ tc-001 Verify image is valid for ToolsQA
     Page Should Contain Image   ${VALID_IMAGE}
     # Step 2: verify that the element is visible
     Element Should Be Visible   ${VALID_IMAGE}
-    # Step 4: verify that when go to image URL, it must have image there.Not empty page
+    # Step 3: verify that when go to image URL, it must have image there.Not empty page
     ${img src1}=     Get element attribute   ${VALID_IMAGE}    attribute=src
     Go To       ${img src1}
     Page Should Contain Image   ${VERIFY_VALID_IMAGE}
@@ -37,6 +37,7 @@ tc-002 Verify image is invalid for ToolsQA
     Page Should Contain Image   ${INVALID_IMAGE}
     # Step 2: verify that the element is visible
     Element Should Be Visible   ${INVALID_IMAGE}
+    # Step 3: verify response code is 200
     ${img src2}=     Get element attribute   ${INVALID_IMAGE}    attribute=src
     ${response}=     Get        ${img src2}
     Should be equal as integers     ${response.status_code}     200
