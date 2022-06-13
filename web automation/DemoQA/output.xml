@@ -1,85 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220613 15:16:52.708" rpa="false" schemaversion="3">
-<suite id="s1" name="Imagebroke" source="C:\Users\Ploy\Documents\RobotFramework-Selenium-Basic\web automation\DemoQA\imagebroke.robot">
-<test id="s1-t1" name="tc-001 Verify that when access this website,the image should broken" line="11">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220613 16:26:14.568" rpa="false" schemaversion="3">
+<suite id="s1" name="Broke" source="C:\Users\Ploy\Documents\RobotFramework-Selenium-Basic\web automation\DemoQA\broke.robot">
+<test id="s1-t1" name="tc-001 Verify image is valid for ToolsQA" line="25">
+<kw name="Open Browser And Maximize" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${TEST_PAGE}</arg>
-<arg>browser=chrome</arg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220613 15:16:53.125" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220613 15:16:53.125" endtime="20220613 15:16:57.744"/>
+<msg timestamp="20220613 16:26:14.887" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/broken'.</msg>
+<status status="PASS" starttime="20220613 16:26:14.887" endtime="20220613 16:26:19.533"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220613 16:26:19.533" endtime="20220613 16:26:19.669"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220613 16:26:21.680" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220613 16:26:19.670" endtime="20220613 16:26:21.680"/>
+</kw>
+<status status="PASS" starttime="20220613 16:26:14.886" endtime="20220613 16:26:21.680"/>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
-<arg>xpath=//img[contains(@alt, "Katalon Acedemy")]</arg>
+<arg>${VALID_IMAGE}</arg>
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20220613 15:16:57.769" level="INFO">Current page contains image 'xpath=//img[contains(@alt, "Katalon Acedemy")]'.</msg>
-<status status="PASS" starttime="20220613 15:16:57.745" endtime="20220613 15:16:57.769"/>
+<msg timestamp="20220613 16:26:21.715" level="INFO">Current page contains image 'xpath=//div[p[text()='Valid image']]/img[contains(@src, "/images/Toolsqa.jpg")]'.</msg>
+<status status="PASS" starttime="20220613 16:26:21.681" endtime="20220613 16:26:21.715"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=//img[contains(@alt, "Katalon Acedemy")]</arg>
+<arg>${VALID_IMAGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220613 15:16:57.799" level="INFO">Element 'xpath=//img[contains(@alt, "Katalon Acedemy")]' is displayed.</msg>
-<status status="PASS" starttime="20220613 15:16:57.770" endtime="20220613 15:16:57.799"/>
+<msg timestamp="20220613 16:26:21.743" level="INFO">Element 'xpath=//div[p[text()='Valid image']]/img[contains(@src, "/images/Toolsqa.jpg")]' is displayed.</msg>
+<status status="PASS" starttime="20220613 16:26:21.716" endtime="20220613 16:26:21.743"/>
 </kw>
 <kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${img src}</var>
-<arg>xpath=//img[contains(@src, "../assets/DemoQA_banner_Katalon_Free_Automation_Tools.png")]</arg>
+<var>${img src1}</var>
+<arg>${VALID_IMAGE}</arg>
 <arg>attribute=src</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20220613 15:16:57.838" level="INFO">${img src} = https://demoqa.com/assets/DemoQA_banner_Katalon_Free_Automation_Tools.png</msg>
-<status status="PASS" starttime="20220613 15:16:57.799" endtime="20220613 15:16:57.838"/>
+<msg timestamp="20220613 16:26:21.768" level="INFO">${img src1} = https://demoqa.com/images/Toolsqa.jpg</msg>
+<status status="PASS" starttime="20220613 16:26:21.744" endtime="20220613 16:26:21.768"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${img src1}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220613 16:26:21.769" level="INFO">Opening url 'https://demoqa.com/images/Toolsqa.jpg'</msg>
+<status status="PASS" starttime="20220613 16:26:21.769" endtime="20220613 16:26:21.970"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>${VERIFY_VALID_IMAGE}</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220613 16:26:22.001" level="INFO">Current page contains image 'xpath=//img[contains(@src, "/images/Toolsqa.jpg")]'.</msg>
+<status status="PASS" starttime="20220613 16:26:21.973" endtime="20220613 16:26:22.001"/>
+</kw>
+<kw name="Close Browser Window" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220613 16:26:22.002" endtime="20220613 16:26:24.275"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Test Completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220613 16:26:24.275" endtime="20220613 16:26:24.278"/>
+</kw>
+<status status="PASS" starttime="20220613 16:26:22.001" endtime="20220613 16:26:24.279"/>
+</kw>
+<status status="PASS" starttime="20220613 16:26:14.885" endtime="20220613 16:26:24.280"/>
+</test>
+<test id="s1-t2" name="tc-002 Verify image is invalid for ToolsQA" line="35">
+<kw name="Open Browser And Maximize" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220613 16:26:24.295" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/broken'.</msg>
+<status status="PASS" starttime="20220613 16:26:24.292" endtime="20220613 16:26:27.486"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220613 16:26:27.487" endtime="20220613 16:26:27.677"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220613 16:26:29.683" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220613 16:26:27.677" endtime="20220613 16:26:29.683"/>
+</kw>
+<status status="PASS" starttime="20220613 16:26:24.290" endtime="20220613 16:26:29.684"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>${INVALID_IMAGE}</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220613 16:26:29.733" level="INFO">Current page contains image 'xpath=//img[contains(@src, "/images/Toolsqa_1.jpg")]'.</msg>
+<status status="PASS" starttime="20220613 16:26:29.687" endtime="20220613 16:26:29.733"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${INVALID_IMAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220613 16:26:29.757" level="INFO">Element 'xpath=//img[contains(@src, "/images/Toolsqa_1.jpg")]' is displayed.</msg>
+<status status="PASS" starttime="20220613 16:26:29.734" endtime="20220613 16:26:29.757"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${img src2}</var>
+<arg>${INVALID_IMAGE}</arg>
+<arg>attribute=src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220613 16:26:29.780" level="INFO">${img src2} = https://demoqa.com/images/Toolsqa_1.jpg</msg>
+<status status="PASS" starttime="20220613 16:26:29.758" endtime="20220613 16:26:29.780"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
-<arg>${img src}</arg>
+<arg>${img src2}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220613 15:16:58.131" level="INFO">GET Request : url=https://demoqa.com/assets/DemoQA_banner_Katalon_Free_Automation_Tools.png 
- path_url=/assets/DemoQA_banner_Katalon_Free_Automation_Tools.png 
+<msg timestamp="20220613 16:26:30.026" level="INFO">GET Request : url=https://demoqa.com/images/Toolsqa_1.jpg 
+ path_url=/images/Toolsqa_1.jpg 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220613 15:16:58.131" level="INFO">GET Response : url=https://demoqa.com/assets/DemoQA_banner_Katalon_Free_Automation_Tools.png 
+<msg timestamp="20220613 16:26:30.027" level="INFO">GET Response : url=https://demoqa.com/images/Toolsqa_1.jpg 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 13 Jun 2022 12:16:58 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Cache-Control': 'public, max-age=0', 'Last-Modified': 'Sat, 09 Apr 2022 18:36:57 GMT', 'ETag': 'W/"c27-1800f9d6f35"', 'Content-Encoding': 'gzip'} 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 13 Jun 2022 13:26:30 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Cache-Control': 'public, max-age=0', 'Last-Modified': 'Sat, 09 Apr 2022 18:36:57 GMT', 'ETag': 'W/"c27-1800f9d6f35"', 'Content-Encoding': 'gzip'} 
  body=&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;&lt;script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"&gt;&lt;/script&gt;&lt;script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"&gt;&lt;/script&gt;&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"&gt;&lt;script async&gt;async function detectAdBlock(){let e=!1;try{await fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")).catch(t=&gt;e=!0)}catch(t){e=!1}finally{!0===e&amp;&amp;dataLayer.push({event:"Ad Blocker"}),console.log("AdBlock Enabled: "+e)}}detectAdBlock()&lt;/script&gt;&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5889298451609146" crossorigin="anonymous"&gt;&lt;/script&gt;&lt;title&gt;ToolsQA&lt;/title&gt;&lt;div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999"&gt;&lt;div style="text-align:center;display:block;max-width:970px;height:auto;overflow:hidden;margin:auto"&gt;&lt;script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"&gt;&lt;/script&gt;&lt;script&gt;var gptadslots=[],googletag=googletag||{cmd:[]}&lt;/script&gt;&lt;script&gt;googletag.cmd.push((function(){var e=googletag.sizeMapping().addSize([0,0],[[320,50],[300,75],[300,50]]).addSize([730,200],[[728,90],[468,60]]).addSize([975,200],[[970,90],[728,90],[960,90],[750,100],[950,90],[468,60]]).build();gptadslots.push(googletag.defineSlot("/21849154601,22343295815/Ad.Plus-Anchor",[[320,100]],"adplus-anchor").setTargeting("site",["demoqa.com"]).defineSizeMapping(e).addService(googletag.pubads())),googletag.enableServices()}))&lt;/script&gt;&lt;div&gt;&lt;a id="close-fixedban" onclick='document.getElementById("fixedban&amp;apos").style.display="none&amp;apos"' style="cursor:pointer"&gt;&lt;img src="https://ad.plus/adplus-advertising.svg" alt="adplus-dvertising" title="Ad.Plus Advertising" style="vertical-align:middle"/&gt;&lt;/a&gt;&lt;/div&gt;&lt;div id="adplus-anchor"&gt;&lt;script&gt;googletag.cmd.push((function(){googletag.display("adplus-anchor")}))&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-MX8DD4S",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")&lt;/script&gt;&lt;link rel="shortcut icon" href="/favicon.png"&gt;&lt;link href="/main.css" rel="stylesheet"&gt;&lt;/head&gt;&lt;body&gt;&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8DD4S" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;&lt;/noscript&gt;&lt;div id="app"&gt;&lt;/div&gt;&lt;script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async defer="defer"&gt;&lt;/script&gt;&lt;script src="/bundle.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 
  </msg>
-<msg timestamp="20220613 15:16:58.131" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220613 15:16:57.839" endtime="20220613 15:16:58.131"/>
+<msg timestamp="20220613 16:26:30.028" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220613 16:26:29.781" endtime="20220613 16:26:30.028"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20220613 15:16:58.134" level="INFO">Argument types are:
+<msg timestamp="20220613 16:26:30.033" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220613 15:16:58.131" endtime="20220613 15:16:58.134"/>
+<status status="PASS" starttime="20220613 16:26:30.030" endtime="20220613 16:26:30.034"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>${img src}</arg>
+<arg>${img src2}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220613 15:16:58.135" level="INFO">Opening url 'https://demoqa.com/assets/DemoQA_banner_Katalon_Free_Automation_Tools.png'</msg>
-<status status="PASS" starttime="20220613 15:16:58.135" endtime="20220613 15:16:58.806"/>
+<msg timestamp="20220613 16:26:30.037" level="INFO">Opening url 'https://demoqa.com/images/Toolsqa_1.jpg'</msg>
+<status status="PASS" starttime="20220613 16:26:30.036" endtime="20220613 16:26:30.674"/>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
-<arg>xpath=//img[contains(@src, "../assets/DemoQA_banner_Katalon_Free_Automation_Tools.png")]</arg>
+<arg>${INVALID_IMAGE}</arg>
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20220613 15:16:58.975" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220613 15:16:58.976" level="FAIL">Page should have contained image 'xpath=//img[contains(@src, "../assets/DemoQA_banner_Katalon_Free_Automation_Tools.png")]' but did not.</msg>
-<status status="FAIL" starttime="20220613 15:16:58.807" endtime="20220613 15:16:58.981"/>
+<msg timestamp="20220613 16:26:30.882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220613 16:26:30.884" level="FAIL">Page should have contained image 'xpath=//img[contains(@src, "/images/Toolsqa_1.jpg")]' but did not.</msg>
+<status status="FAIL" starttime="20220613 16:26:30.675" endtime="20220613 16:26:30.887"/>
 </kw>
-<status status="FAIL" starttime="20220613 15:16:53.123" endtime="20220613 15:16:58.984">Page should have contained image 'xpath=//img[contains(@src, "../assets/DemoQA_banner_Katalon_Free_Automation_Tools.png")]' but did not.</status>
+<kw name="Close Browser Window" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220613 16:26:30.890" endtime="20220613 16:26:33.081"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Test Completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220613 16:26:33.081" endtime="20220613 16:26:33.083"/>
+</kw>
+<status status="PASS" starttime="20220613 16:26:30.889" endtime="20220613 16:26:33.083"/>
+</kw>
+<status status="FAIL" starttime="20220613 16:26:24.287" endtime="20220613 16:26:33.084">Page should have contained image 'xpath=//img[contains(@src, "/images/Toolsqa_1.jpg")]' but did not.</status>
 </test>
-<status status="FAIL" starttime="20220613 15:16:52.708" endtime="20220613 15:16:58.987"/>
+<status status="FAIL" starttime="20220613 16:26:14.570" endtime="20220613 16:26:33.087"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Imagebroke">Imagebroke</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Broke">Broke</stat>
 </suite>
 </statistics>
 <errors>

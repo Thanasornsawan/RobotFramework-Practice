@@ -5,7 +5,10 @@ Start robot by `robot {filename.robot}`
 ### Web automation
 > require `pip install robotframework` and `pip install robotframework-seleniumlibrary` <br/>
 > Download chrome driver and set into PATH system.<br/>
+
+#### Doppio Tech
 > File for test web automation is in folder `ep01_material` for test on localhost <br/>
+
 - ex00 focus on input text that have unique ID
 - ex01 focus on input text that have custom attribute 'v'
 - ex02 focus on parent tag <div> have custom attribute 'v'
@@ -14,6 +17,9 @@ Start robot by `robot {filename.robot}`
 - ex05 None of tags has attruibutes, focus on text between <span>
 - ex06 dupplicate attribute on parent tags, use keyword 'and'
 - assignment practice input, click element in dropdown, select checkbox, click button
+
+#### DemoQA
+- broke.robot is focus on veiry image valid/invalid and link valid/invalid
 
 ### API automation
 > require `pip install robotframework-requests`
