@@ -5,8 +5,9 @@ This repository is my robot framework practice
 ### How to start robot
 ```shell
 robot {filename.robot}
-example1: robot broke.robot
-example2: robot -t "tc-001*" .\broke.robot
+normal command: robot broke.robot
+run specific test case in test suite: robot -t "tc-001*" .\broke.robot
+keep the result inside folder Results: robot -d .\Results\ '.\web automation\eBay\basicSearch.robot' 
 ```
 
 ### Web automation

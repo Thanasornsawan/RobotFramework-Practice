@@ -25,6 +25,8 @@ Close Browser Window
 
 *** Test cases ***
 tc-001 Verify image is valid for ToolsQA
+    [Documentation]     Valid Image
+    [Tags]      Functional
     # Step 1: verify the page contains the given element
     Page Should Contain Image   ${VALID_IMAGE}
     # Step 2: verify that when go to image URL, it must have image there.Not empty page
@@ -33,6 +35,8 @@ tc-001 Verify image is valid for ToolsQA
     Page Should Contain Image   ${VERIFY_VALID_IMAGE}
 
 tc-002 Verify image is invalid for ToolsQA
+    [Documentation]     Invalid Image
+    [Tags]      Functional
     # Step 1: verify the page contains the given element
     Page Should Contain Image   ${INVALID_IMAGE}
     # Step 2: verify that the element is visible
@@ -40,14 +44,18 @@ tc-002 Verify image is invalid for ToolsQA
     # Step 3: verify that when go to image URL, it must have image there.Not empty page
     ${img src2}=     Get element attribute   ${INVALID_IMAGE}    attribute=src
     Go To       ${img src2}
-    Page Should Contain Image   ${INVALID_IMAGE}
+    Page Should Not Contain Image   ${INVALID_IMAGE}
 
 tc-003 Verify the link is valid
+    [Documentation]     Valid link
+    [Tags]      Regression
     ${link}=        Get Element attribute   ${VALID_LINK}   attribute=href
     ${response}=    Get     ${link}     expected_status=200
     Should be equal as integers     ${response.status_code}     200
 
 tc-004 Verify the link is invalid
+    [Documentation]     Invalid link
+    [Tags]      Regression
     ${link}=        Get Element attribute   ${INVALID_LINK}     attribute=href
     ${response}=    Get     ${link}     expected_status=500
     Log to Console      ${response.status_code}
