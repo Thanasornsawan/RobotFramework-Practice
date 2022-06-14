@@ -24,7 +24,9 @@ Specify variable: robot -d .\Results\ -v env:uat '.\web automation\eBay\basicSea
 > require `pip install robotframework` and `pip install robotframework-seleniumlibrary` <br/>
 > Download chrome driver and set into PATH system.<br/>
 
-#### Doppio Tech
+<details>
+  <summary>Doppio Tech</summary>
+
 > File for test web automation is in folder `ep01_material` for test on localhost <br/>
 > Focus on practice many techniques for xpath input text box and form.
 
@@ -36,15 +38,22 @@ Specify variable: robot -d .\Results\ -v env:uat '.\web automation\eBay\basicSea
 - ex05 None of tags has attruibutes, focus on text between <span>
 - ex06 dupplicate attribute on parent tags, use keyword 'and'
 - assignment practice input, click element in dropdown, select checkbox, click button
+</details>
 
-#### eBay
+<details>
+  <summary>eBay</summary>
+
 > Focus on testing real web application with "Page Object Model" pattern from Resources folder <br/>
 > The idea of `POM` is to seperate common functions following pages or navigation to use with many places.<br/>
 > The commonFunctionality.robot is common functions that can use for all test suites like open and close browser.
+</details>
 
-#### DemoQA
+<details>
+  <summary>DemoQA</summary>
+
 > Focus on practice all Elements, Forms, Alert, Frame & Windows, Widgets, Interactions, Book Store Application
 - broke.robot is focus on veiry image valid/invalid and link valid/invalid
+</details>
 
 ### API automation
 > require `pip install robotframework-requests`
