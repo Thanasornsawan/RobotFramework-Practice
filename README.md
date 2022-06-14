@@ -1,6 +1,15 @@
-## Robot framework selenium practice
+## Robot Framework Selenium Practice
 
 This repository is my robot framework practice
+
+### Version of package in this repository
+robotframework                 |	5.0.1 <br/>
+robotframework-pythonlibcore   |	3.0.0 <br/>
+robotframework-requests        |	0.9.3 <br/>
+robotframework-seleniumlibrary |	6.0.0 <br/>
+selenium                       |	4.2.0 <br/>
+
+**Please check your version and document during following this repository because some old robot framework version use another way to define variables**
 
 ### How to start robot
 ```shell
@@ -16,6 +25,7 @@ keep the result inside folder Results: robot -d .\Results\ '.\web automation\eBa
 
 #### Doppio Tech
 > File for test web automation is in folder `ep01_material` for test on localhost <br/>
+> Focus on practice many techniques for xpath input text box and form.
 
 - ex00 focus on input text that have unique ID
 - ex01 focus on input text that have custom attribute 'v'
@@ -26,7 +36,13 @@ keep the result inside folder Results: robot -d .\Results\ '.\web automation\eBa
 - ex06 dupplicate attribute on parent tags, use keyword 'and'
 - assignment practice input, click element in dropdown, select checkbox, click button
 
+#### eBay
+> Focus on testing real web application with "Page Object Model" pattern from Resources folder <br/>
+> The idea of `POM` is to seperate common functions following pages or navigation to use with many places.<br/>
+> The commonFunctionality.robot is common functions that can use for all test suites like open and close browser.
+
 #### DemoQA
+> Focus on practice all Elements, Forms, Alert, Frame & Windows, Widgets, Interactions, Book Store Application
 - broke.robot is focus on veiry image valid/invalid and link valid/invalid
 
 ### API automation

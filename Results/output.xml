@@ -1,76 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220614 13:48:12.721" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220614 17:05:38.936" rpa="false" schemaversion="3">
 <suite id="s1" name="basicSearch" source="C:\Users\Ploy\Documents\RobotFramework-Selenium-Basic\web automation\eBay\basicSearch.robot">
-<test id="s1-t1" name="tc-001 Verify Basic Search Functionality for ebay" line="22">
-<kw name="Open Browser And Maximize" type="SETUP">
+<test id="s1-t1" name="tc-001 Verify Basic Search Functionality for ebay" line="11">
+<kw name="Open Browser And Maximize" library="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220614 13:48:13.306" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20220614 13:48:13.305" endtime="20220614 13:48:17.716"/>
+<msg timestamp="20220614 17:05:39.672" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220614 17:05:39.671" endtime="20220614 17:05:43.956"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220614 13:48:17.717" endtime="20220614 13:48:17.947"/>
+<status status="PASS" starttime="20220614 17:05:43.957" endtime="20220614 17:05:44.159"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220614 13:48:19.954" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220614 13:48:17.947" endtime="20220614 13:48:19.955"/>
+<msg timestamp="20220614 17:05:46.162" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220614 17:05:44.159" endtime="20220614 17:05:46.162"/>
 </kw>
-<status status="PASS" starttime="20220614 13:48:13.305" endtime="20220614 13:48:19.958"/>
+<status status="PASS" starttime="20220614 17:05:39.670" endtime="20220614 17:05:46.163"/>
 </kw>
+<kw name="Input Search Text and Click Search" library="HeaderPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="gh-ac"]</arg>
-<arg>mobile</arg>
+<arg>${list_search_texts}[2]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220614 13:48:19.965" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
-<status status="PASS" starttime="20220614 13:48:19.962" endtime="20220614 13:48:21.396"/>
+<msg timestamp="20220614 17:05:46.167" level="INFO">Typing text 'robot' into text field '//*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20220614 17:05:46.165" endtime="20220614 17:05:47.446"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>//*[@id="gh-btn"]</arg>
-<arg>[Return]</arg>
+<arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220614 13:48:21.399" level="INFO">Sending key(s) ('[Return]',) to //*[@id="gh-btn"] element.</msg>
-<msg timestamp="20220614 13:48:25.514" level="INFO">Sending keys [Return]</msg>
-<status status="PASS" starttime="20220614 13:48:21.397" endtime="20220614 13:48:25.623"/>
+<msg timestamp="20220614 17:05:47.447" level="INFO">Sending key(s) ('RETURN',) to //*[@id="gh-btn"] element.</msg>
+<msg timestamp="20220614 17:05:51.477" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220614 17:05:51.478" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220614 17:05:47.447" endtime="20220614 17:05:51.694"/>
 </kw>
+<status status="PASS" starttime="20220614 17:05:46.164" endtime="20220614 17:05:51.694"/>
+</kw>
+<kw name="Verify Search results" library="SearchResultsPage">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>results for mobile</arg>
+<arg>${search_result} ${list_search_texts}[2]</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220614 13:48:26.206" level="INFO">Current page contains text 'results for mobile'.</msg>
-<status status="PASS" starttime="20220614 13:48:25.624" endtime="20220614 13:48:26.206"/>
+<msg timestamp="20220614 17:05:51.744" level="INFO">Current page contains text 'results for robot'.</msg>
+<status status="PASS" starttime="20220614 17:05:51.695" endtime="20220614 17:05:51.744"/>
 </kw>
-<kw name="Close Browser Window" type="TEARDOWN">
+<status status="PASS" starttime="20220614 17:05:51.695" endtime="20220614 17:05:51.744"/>
+</kw>
+<kw name="Close Browser Window" library="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220614 13:48:26.212" endtime="20220614 13:48:28.561"/>
+<status status="PASS" starttime="20220614 17:05:51.744" endtime="20220614 17:05:54.180"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Test Completed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220614 13:48:28.562" endtime="20220614 13:48:28.563"/>
+<status status="PASS" starttime="20220614 17:05:54.181" endtime="20220614 17:05:54.183"/>
 </kw>
-<status status="PASS" starttime="20220614 13:48:26.211" endtime="20220614 13:48:28.564"/>
+<status status="PASS" starttime="20220614 17:05:51.744" endtime="20220614 17:05:54.184"/>
 </kw>
 <doc>This test case verifies the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20220614 13:48:13.303" endtime="20220614 13:48:28.565"/>
+<status status="PASS" starttime="20220614 17:05:39.667" endtime="20220614 17:05:54.185"/>
+</test>
+<test id="s1-t2" name="tc-002 Verify Advance Search Functionality" line="18">
+<kw name="Open Browser And Maximize" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220614 17:05:54.201" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220614 17:05:54.199" endtime="20220614 17:05:58.205"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220614 17:05:58.205" endtime="20220614 17:05:58.376"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220614 17:06:00.383" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220614 17:05:58.376" endtime="20220614 17:06:00.383"/>
+</kw>
+<status status="PASS" starttime="20220614 17:05:54.196" endtime="20220614 17:06:00.384"/>
+</kw>
+<kw name="Click on Advance Search Link" library="HeaderPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="gh-as-a"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220614 17:06:00.388" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
+<status status="PASS" starttime="20220614 17:06:00.387" endtime="20220614 17:06:03.698"/>
+</kw>
+<status status="PASS" starttime="20220614 17:06:00.385" endtime="20220614 17:06:03.700"/>
+</kw>
+<kw name="Close Browser Window" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220614 17:06:03.707" endtime="20220614 17:06:06.228"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Test Completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220614 17:06:06.229" endtime="20220614 17:06:06.231"/>
+</kw>
+<status status="PASS" starttime="20220614 17:06:03.703" endtime="20220614 17:06:06.231"/>
+</kw>
+<doc>This test case verifies the advance search</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20220614 17:05:54.193" endtime="20220614 17:06:06.232"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" starttime="20220614 13:48:12.726" endtime="20220614 13:48:28.573"/>
+<status status="PASS" starttime="20220614 17:05:38.984" endtime="20220614 17:06:06.240"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="2" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="basicSearch">basicSearch</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="basicSearch">basicSearch</stat>
 </suite>
 </statistics>
 <errors>
