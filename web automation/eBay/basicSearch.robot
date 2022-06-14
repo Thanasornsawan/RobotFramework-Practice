@@ -12,7 +12,7 @@ tc-001 Verify Basic Search Functionality for ebay
     [Documentation]     This test case verifies the basic search
     [Tags]      Functional
     
-    HeaderPage.Input Search Text and Click Search
+    HeaderPage.Input Search Text and Click Search with dict
     SearchResultsPage.Verify Search results
 
 tc-002 Verify Advance Search Functionality

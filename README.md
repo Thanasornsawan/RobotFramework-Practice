@@ -17,6 +17,7 @@ robot {filename.robot}
 normal command: robot broke.robot
 run specific test case in test suite: robot -t "tc-001*" .\broke.robot
 keep the result inside folder Results: robot -d .\Results\ '.\web automation\eBay\basicSearch.robot' 
+Specify variable: robot -d .\Results\ -v env:uat '.\web automation\eBay\basicSearch.robot' 
 ```
 
 ### Web automation
