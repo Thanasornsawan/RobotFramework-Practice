@@ -1,6 +1,13 @@
-## Robot framework selenium basic
+## Robot framework selenium practice
 
-Start robot by `robot {filename.robot}`
+This repository is my robot framework practice
+
+### How to start robot
+```shell
+robot {filename.robot}
+example1: robot broke.robot
+example2: robot -t "tc-001*" .\broke.robot
+```
 
 ### Web automation
 > require `pip install robotframework` and `pip install robotframework-seleniumlibrary` <br/>

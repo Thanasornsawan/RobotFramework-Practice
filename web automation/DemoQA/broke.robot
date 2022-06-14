@@ -10,6 +10,8 @@ ${Browser}          Chrome
 ${VALID_IMAGE}      xpath=//div[p[text()='Valid image']]/img[contains(@src, "/images/Toolsqa.jpg")] 
 ${VERIFY_VALID_IMAGE}   xpath=//img[contains(@src, "/images/Toolsqa.jpg")]
 ${INVALID_IMAGE}    xpath=//img[contains(@src, "/images/Toolsqa_1.jpg")] 
+${VALID_LINK}       xpath=//a[contains(@href,'http://demoqa.com')]
+${INVALID_LINK}     xpath=//a[contains(@href,'http://the-internet.herokuapp.com/status_codes/500')]
 
 *** Keywords ***
 Open Browser And Maximize
@@ -25,9 +27,7 @@ Close Browser Window
 tc-001 Verify image is valid for ToolsQA
     # Step 1: verify the page contains the given element
     Page Should Contain Image   ${VALID_IMAGE}
-    # Step 2: verify that the element is visible
-    Element Should Be Visible   ${VALID_IMAGE}
-    # Step 3: verify that when go to image URL, it must have image there.Not empty page
+    # Step 2: verify that when go to image URL, it must have image there.Not empty page
     ${img src1}=     Get element attribute   ${VALID_IMAGE}    attribute=src
     Go To       ${img src1}
     Page Should Contain Image   ${VERIFY_VALID_IMAGE}
@@ -37,10 +37,18 @@ tc-002 Verify image is invalid for ToolsQA
     Page Should Contain Image   ${INVALID_IMAGE}
     # Step 2: verify that the element is visible
     Element Should Be Visible   ${INVALID_IMAGE}
-    # Step 3: verify response code is 200
+    # Step 3: verify that when go to image URL, it must have image there.Not empty page
     ${img src2}=     Get element attribute   ${INVALID_IMAGE}    attribute=src
-    ${response}=     Get        ${img src2}
-    Should be equal as integers     ${response.status_code}     200
-    # Step 4: verify that when go to image URL, it must have image there.Not empty page
     Go To       ${img src2}
     Page Should Contain Image   ${INVALID_IMAGE}
+
+tc-003 Verify the link is valid
+    ${link}=        Get Element attribute   ${VALID_LINK}   attribute=href
+    ${response}=    Get     ${link}     expected_status=200
+    Should be equal as integers     ${response.status_code}     200
+
+tc-004 Verify the link is invalid
+    ${link}=        Get Element attribute   ${INVALID_LINK}     attribute=href
+    ${response}=    Get     ${link}     expected_status=500
+    Log to Console      ${response.status_code}
+    Should be equal as integers    ${response.status_code}       500      
