@@ -1,101 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220615 13:35:16.898" rpa="false" schemaversion="3">
-<suite id="s1" name="Radio" source="C:\Users\Ploy\Documents\RobotFramework-Practice\web automation\DemoQA\radio.robot">
-<test id="s1-t1" name="tc-001 Verify page not has default value and can select" line="21">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220615 18:01:23.319" rpa="false" schemaversion="3">
+<suite id="s1" name="Checkbox" source="C:\Users\Ploy\Documents\RobotFramework-Practice\web automation\DemoQA\checkbox.robot">
+<test id="s1-t1" name="tc-001 Verify page can expand and collapse at symbol &gt;" line="29">
 <kw name="Open Browser And Maximize" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220615 13:35:17.258" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/radio-button'.</msg>
-<status status="PASS" starttime="20220615 13:35:17.258" endtime="20220615 13:35:21.429"/>
+<msg timestamp="20220615 18:01:23.815" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/checkbox'.</msg>
+<status status="PASS" starttime="20220615 18:01:23.815" endtime="20220615 18:01:27.486"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220615 13:35:21.429" endtime="20220615 13:35:21.587"/>
+<status status="PASS" starttime="20220615 18:01:27.486" endtime="20220615 18:01:27.621"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220615 13:35:23.592" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220615 13:35:21.588" endtime="20220615 13:35:23.592"/>
+<msg timestamp="20220615 18:01:29.645" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:27.621" endtime="20220615 18:01:29.645"/>
 </kw>
-<status status="PASS" starttime="20220615 13:35:17.258" endtime="20220615 13:35:23.592"/>
+<status status="PASS" starttime="20220615 18:01:23.814" endtime="20220615 18:01:29.646"/>
 </kw>
-<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
-<arg>xpath://*[@id="noRadio"]</arg>
-<doc>Verifies radio button ``locator`` is found from current page.</doc>
-<msg timestamp="20220615 13:35:23.714" level="INFO">Current page contains radio button 'xpath://*[@id="noRadio"]'.</msg>
-<status status="PASS" starttime="20220615 13:35:23.592" endtime="20220615 13:35:23.714"/>
-</kw>
-<kw name="Radio Button Should Not Be Selected" library="SeleniumLibrary">
-<arg>like</arg>
-<doc>Verifies radio button group ``group_name`` has no selection.</doc>
-<msg timestamp="20220615 13:35:23.714" level="INFO">Verifying radio button 'like' has no selection.</msg>
-<status status="PASS" starttime="20220615 13:35:23.714" endtime="20220615 13:35:23.799"/>
-</kw>
-<kw name="Element Should Be Disabled" library="SeleniumLibrary">
-<arg>xpath://*[@id="noRadio"]</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" starttime="20220615 13:35:23.799" endtime="20220615 13:35:23.834"/>
-</kw>
-<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
-<arg>xpath://*[@id="yesRadio"]</arg>
-<doc>Verifies radio button ``locator`` is found from current page.</doc>
-<msg timestamp="20220615 13:35:23.897" level="INFO">Current page contains radio button 'xpath://*[@id="yesRadio"]'.</msg>
-<status status="PASS" starttime="20220615 13:35:23.834" endtime="20220615 13:35:23.897"/>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<arg>id:tree-node-home</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<msg timestamp="20220615 18:01:29.755" level="INFO">Current page contains checkbox 'id:tree-node-home'.</msg>
+<status status="PASS" starttime="20220615 18:01:29.646" endtime="20220615 18:01:29.755"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220615 13:35:25.902" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220615 13:35:23.897" endtime="20220615 13:35:25.903"/>
+<msg timestamp="20220615 18:01:31.767" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:29.755" endtime="20220615 18:01:31.767"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/label</arg>
+<arg>${locator_home}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220615 13:35:25.909" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/label'.</msg>
-<status status="PASS" starttime="20220615 13:35:25.908" endtime="20220615 13:35:26.691"/>
+<msg timestamp="20220615 18:01:31.767" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[1]/ol/li/span/label/span[1]'.</msg>
+<status status="PASS" starttime="20220615 18:01:31.767" endtime="20220615 18:01:31.956"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220615 13:35:28.702" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220615 13:35:26.693" endtime="20220615 13:35:28.702"/>
+<msg timestamp="20220615 18:01:33.975" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:31.958" endtime="20220615 18:01:33.975"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>You have selected Yes</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220615 13:35:28.743" level="INFO">Current page contains text 'You have selected Yes'.</msg>
-<status status="PASS" starttime="20220615 13:35:28.704" endtime="20220615 13:35:28.743"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${toggle_button_home}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:33.978" level="INFO">Clicking button 'xpath://button[contains(@class,'rct-collapse rct-collapse-btn')]'.</msg>
+<status status="PASS" starttime="20220615 18:01:33.977" endtime="20220615 18:01:34.188"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:36.204" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:34.189" endtime="20220615 18:01:36.205"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${expand_element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220615 18:01:36.207" endtime="20220615 18:01:36.256"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${toggle_button_documents}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:36.258" level="INFO">Clicking button 'xpath://*[@id="tree-node"]/ol/li/ol/li[2]/span/button'.</msg>
+<status status="PASS" starttime="20220615 18:01:36.257" endtime="20220615 18:01:36.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:38.388" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:36.384" endtime="20220615 18:01:38.389"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220615 18:01:38.392" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220615 18:01:38.390" endtime="20220615 18:01:38.422"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:40.431" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:38.425" endtime="20220615 18:01:40.431"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${toggle_button_workspace}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:40.433" level="INFO">Clicking button 'xpath://*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/span/button'.</msg>
+<status status="PASS" starttime="20220615 18:01:40.432" endtime="20220615 18:01:40.604"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:42.613" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:40.606" endtime="20220615 18:01:42.613"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${element}</var>
+<value>1</value>
+<value>4</value>
+<iter>
+<var name="${element}">1</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${str}</var>
+<arg>SEPARATOR=</arg>
+<arg>${locate_workspace_list}</arg>
+<arg>[${element}]</arg>
+<arg>/span/label/span[3]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220615 18:01:42.639" level="INFO">${str} = xpath://*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[1]/span/label/span[3]</msg>
+<status status="PASS" starttime="20220615 18:01:42.638" endtime="20220615 18:01:42.639"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${str}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:42.719" level="INFO">${text} = React</msg>
+<status status="PASS" starttime="20220615 18:01:42.640" endtime="20220615 18:01:42.720"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220615 18:01:42.720" endtime="20220615 18:01:42.722"/>
+</kw>
+<status status="PASS" starttime="20220615 18:01:42.636" endtime="20220615 18:01:42.722"/>
+</iter>
+<iter>
+<var name="${element}">2</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${str}</var>
+<arg>SEPARATOR=</arg>
+<arg>${locate_workspace_list}</arg>
+<arg>[${element}]</arg>
+<arg>/span/label/span[3]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220615 18:01:42.723" level="INFO">${str} = xpath://*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[2]/span/label/span[3]</msg>
+<status status="PASS" starttime="20220615 18:01:42.723" endtime="20220615 18:01:42.723"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${str}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:42.776" level="INFO">${text} = Angular</msg>
+<status status="PASS" starttime="20220615 18:01:42.723" endtime="20220615 18:01:42.777"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220615 18:01:42.777" endtime="20220615 18:01:42.778"/>
+</kw>
+<status status="PASS" starttime="20220615 18:01:42.723" endtime="20220615 18:01:42.778"/>
+</iter>
+<iter>
+<var name="${element}">3</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${str}</var>
+<arg>SEPARATOR=</arg>
+<arg>${locate_workspace_list}</arg>
+<arg>[${element}]</arg>
+<arg>/span/label/span[3]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220615 18:01:42.781" level="INFO">${str} = xpath://*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[3]/span/label/span[3]</msg>
+<status status="PASS" starttime="20220615 18:01:42.779" endtime="20220615 18:01:42.781"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${str}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:42.832" level="INFO">${text} = Veu</msg>
+<status status="PASS" starttime="20220615 18:01:42.782" endtime="20220615 18:01:42.832"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220615 18:01:42.833" endtime="20220615 18:01:42.834"/>
+</kw>
+<status status="PASS" starttime="20220615 18:01:42.779" endtime="20220615 18:01:42.834"/>
+</iter>
+<status status="PASS" starttime="20220615 18:01:42.636" endtime="20220615 18:01:42.834"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:44.839" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:42.835" endtime="20220615 18:01:44.839"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${toggle_button_home}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220615 18:01:44.841" level="INFO">Clicking button 'xpath://button[contains(@class,'rct-collapse rct-collapse-btn')]'.</msg>
+<status status="PASS" starttime="20220615 18:01:44.841" endtime="20220615 18:01:45.038"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 18:01:47.054" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 18:01:45.040" endtime="20220615 18:01:47.054"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${collapse_element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220615 18:01:47.056" endtime="20220615 18:01:47.081"/>
 </kw>
 <kw name="Close Browser Window" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220615 13:35:28.747" endtime="20220615 13:35:33.023"/>
+<status status="PASS" starttime="20220615 18:01:47.084" endtime="20220615 18:01:50.735"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Test Completed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220615 13:35:33.023" endtime="20220615 13:35:33.024"/>
+<status status="PASS" starttime="20220615 18:01:50.735" endtime="20220615 18:01:50.736"/>
 </kw>
-<status status="PASS" starttime="20220615 13:35:28.746" endtime="20220615 13:35:33.024"/>
+<status status="PASS" starttime="20220615 18:01:47.082" endtime="20220615 18:01:50.736"/>
 </kw>
-<doc>verfiy default radio value</doc>
-<tag>Functional</tag>
-<status status="PASS" starttime="20220615 13:35:17.256" endtime="20220615 13:35:33.025"/>
+<status status="PASS" starttime="20220615 18:01:23.812" endtime="20220615 18:01:50.737"/>
 </test>
-<status status="PASS" starttime="20220615 13:35:16.900" endtime="20220615 13:35:33.028"/>
+<status status="PASS" starttime="20220615 18:01:23.323" endtime="20220615 18:01:50.740"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Radio">Radio</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Checkbox">Checkbox</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,6 +1,6 @@
 ## Robot Framework Selenium Practice
 
-This repository is my robot framework practice.In `web automation` folder is practice robot frammework with normal robot framework command but if you want python with robot framework, please check in `Python Selenium` folder.
+This repository is my robot framework practice.In `web automation` folder is practice robot frammework with just robot framework command (codeless) but if you want python with robot framework, please check in `Python Selenium` folder.
 
 ### Version of package in this repository
 robotframework                 |	5.0.1 <br/>
@@ -55,6 +55,13 @@ robot -d .\Results\ -v url:www.google.com -v browser:firefox '.\web automation\e
 
 > Focus on practice all Elements, Forms, Alert, Frame & Windows, Widgets, Interactions, Book Store Application
 - broke.robot is focus on veiry image valid/invalid and link valid/invalid
+- radio.robot
+- checkbox.robot (for loop, concat string, scroll to bottom with js)
+</details>
+
+<details>
+  <summary>SauceDemo</summary>
+- ifelse.robot
 </details>
 
 ### API automation
@@ -100,4 +107,5 @@ Execution time fast-slow: Accessibility ID > ID > (UISelector, Xpath)
 - [http://the-internet.herokuapp.com/](http://the-internet.herokuapp.com/)
 - [https://phptravels.com/demo](https://phptravels.com/demo)
 - [https://testautomationpractice.blogspot.com/](https://testautomationpractice.blogspot.com/)
+- [https://www.saucedemo.com/](https://www.saucedemo.com/)
 - [https://www.softwaretestingmentor.com/category/](https://www.softwaretestingmentor.com/category/)
