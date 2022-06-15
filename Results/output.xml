@@ -1,131 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220615 10:39:21.423" rpa="false" schemaversion="3">
-<suite id="s1" name="basicSearch" source="C:\Users\Ploy\Documents\RobotFramework-Practice\web automation\eBay\basicSearch.robot">
-<test id="s1-t1" name="tc-001 Verify Basic Search Functionality for ebay" line="11">
-<kw name="Open Browser And Maximize" library="CommonFunctionality" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220615 13:35:16.898" rpa="false" schemaversion="3">
+<suite id="s1" name="Radio" source="C:\Users\Ploy\Documents\RobotFramework-Practice\web automation\DemoQA\radio.robot">
+<test id="s1-t1" name="tc-001 Verify page not has default value and can select" line="21">
+<kw name="Open Browser And Maximize" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220615 10:39:21.832" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20220615 10:39:21.832" endtime="20220615 10:39:25.523"/>
+<msg timestamp="20220615 13:35:17.258" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/radio-button'.</msg>
+<status status="PASS" starttime="20220615 13:35:17.258" endtime="20220615 13:35:21.429"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220615 10:39:25.523" endtime="20220615 10:39:25.673"/>
+<status status="PASS" starttime="20220615 13:35:21.429" endtime="20220615 13:35:21.587"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220615 10:39:27.689" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220615 10:39:25.674" endtime="20220615 10:39:27.689"/>
+<msg timestamp="20220615 13:35:23.592" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 13:35:21.588" endtime="20220615 13:35:23.592"/>
 </kw>
-<status status="PASS" starttime="20220615 10:39:21.831" endtime="20220615 10:39:27.689"/>
+<status status="PASS" starttime="20220615 13:35:17.258" endtime="20220615 13:35:23.592"/>
 </kw>
-<kw name="Input Search Text and Click Search with Args" library="HeaderPage">
-<arg>robot</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${HomePageSearchTextBox}</arg>
-<arg>${param_search}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220615 10:39:27.692" level="INFO">Typing text 'robot' into text field 'xpath://*[@id='gh-ac']'.</msg>
-<status status="PASS" starttime="20220615 10:39:27.691" endtime="20220615 10:39:27.863"/>
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="noRadio"]</arg>
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<msg timestamp="20220615 13:35:23.714" level="INFO">Current page contains radio button 'xpath://*[@id="noRadio"]'.</msg>
+<status status="PASS" starttime="20220615 13:35:23.592" endtime="20220615 13:35:23.714"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${HomePageSearchButton}</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220615 10:39:27.864" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id='gh-btn'] element.</msg>
-<msg timestamp="20220615 10:39:32.369" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20220615 10:39:32.369" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20220615 10:39:27.863" endtime="20220615 10:39:32.396"/>
+<kw name="Radio Button Should Not Be Selected" library="SeleniumLibrary">
+<arg>like</arg>
+<doc>Verifies radio button group ``group_name`` has no selection.</doc>
+<msg timestamp="20220615 13:35:23.714" level="INFO">Verifying radio button 'like' has no selection.</msg>
+<status status="PASS" starttime="20220615 13:35:23.714" endtime="20220615 13:35:23.799"/>
 </kw>
-<status status="PASS" starttime="20220615 10:39:27.690" endtime="20220615 10:39:32.396"/>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>xpath://*[@id="noRadio"]</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220615 13:35:23.799" endtime="20220615 13:35:23.834"/>
 </kw>
-<kw name="Verify Search results" library="SearchResultsPage">
-<arg>robot</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${search_result} ${param_search}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220615 10:39:32.933" level="INFO">Current page contains text 'results for robot'.</msg>
-<status status="PASS" starttime="20220615 10:39:32.400" endtime="20220615 10:39:32.933"/>
-</kw>
-<status status="PASS" starttime="20220615 10:39:32.398" endtime="20220615 10:39:32.934"/>
-</kw>
-<kw name="Close Browser Window" library="CommonFunctionality" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220615 10:39:32.937" endtime="20220615 10:39:35.372"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Test Completed</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220615 10:39:35.372" endtime="20220615 10:39:35.373"/>
-</kw>
-<status status="PASS" starttime="20220615 10:39:32.935" endtime="20220615 10:39:35.374"/>
-</kw>
-<doc>This test case verifies the basic search</doc>
-<tag>Functional</tag>
-<status status="PASS" starttime="20220615 10:39:21.829" endtime="20220615 10:39:35.374"/>
-</test>
-<test id="s1-t2" name="tc-002 Verify Advance Search Functionality" line="18">
-<kw name="Open Browser And Maximize" library="CommonFunctionality" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220615 10:39:35.379" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20220615 10:39:35.378" endtime="20220615 10:39:40.063"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220615 10:39:40.064" endtime="20220615 10:39:40.209"/>
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="yesRadio"]</arg>
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<msg timestamp="20220615 13:35:23.897" level="INFO">Current page contains radio button 'xpath://*[@id="yesRadio"]'.</msg>
+<status status="PASS" starttime="20220615 13:35:23.834" endtime="20220615 13:35:23.897"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220615 10:39:42.211" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220615 10:39:40.210" endtime="20220615 10:39:42.211"/>
+<msg timestamp="20220615 13:35:25.902" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 13:35:23.897" endtime="20220615 13:35:25.903"/>
 </kw>
-<status status="PASS" starttime="20220615 10:39:35.378" endtime="20220615 10:39:42.211"/>
-</kw>
-<kw name="Click on Advance Search Link" library="HeaderPage">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${HomePageAdvanceSearchLink}</arg>
+<arg>xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/label</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220615 10:39:42.215" level="INFO">Clicking element 'xpath://*[@id='gh-as-a']'.</msg>
-<status status="PASS" starttime="20220615 10:39:42.214" endtime="20220615 10:39:45.614"/>
+<msg timestamp="20220615 13:35:25.909" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20220615 13:35:25.908" endtime="20220615 13:35:26.691"/>
 </kw>
-<status status="PASS" starttime="20220615 10:39:42.213" endtime="20220615 10:39:45.615"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220615 13:35:28.702" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220615 13:35:26.693" endtime="20220615 13:35:28.702"/>
 </kw>
-<kw name="Close Browser Window" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You have selected Yes</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220615 13:35:28.743" level="INFO">Current page contains text 'You have selected Yes'.</msg>
+<status status="PASS" starttime="20220615 13:35:28.704" endtime="20220615 13:35:28.743"/>
+</kw>
+<kw name="Close Browser Window" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220615 10:39:45.619" endtime="20220615 10:39:47.982"/>
+<status status="PASS" starttime="20220615 13:35:28.747" endtime="20220615 13:35:33.023"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Test Completed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220615 10:39:47.982" endtime="20220615 10:39:47.983"/>
+<status status="PASS" starttime="20220615 13:35:33.023" endtime="20220615 13:35:33.024"/>
 </kw>
-<status status="PASS" starttime="20220615 10:39:45.617" endtime="20220615 10:39:47.983"/>
+<status status="PASS" starttime="20220615 13:35:28.746" endtime="20220615 13:35:33.024"/>
 </kw>
-<doc>This test case verifies the advance search</doc>
+<doc>verfiy default radio value</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20220615 10:39:35.376" endtime="20220615 10:39:47.984"/>
+<status status="PASS" starttime="20220615 13:35:17.256" endtime="20220615 13:35:33.025"/>
 </test>
-<doc>Basic Search Functionality</doc>
-<status status="PASS" starttime="20220615 10:39:21.425" endtime="20220615 10:39:47.986"/>
+<status status="PASS" starttime="20220615 13:35:16.900" endtime="20220615 13:35:33.028"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="basicSearch">basicSearch</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Radio">Radio</stat>
 </suite>
 </statistics>
 <errors>
