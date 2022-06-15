@@ -1,6 +1,6 @@
 ## Robot Framework Selenium Practice
 
-This repository is my robot framework practice
+This repository is my robot framework practice.In `web automation` folder is practice robot frammework with normal robot framework command but if you want python with robot framework, please check in `Python Selenium` folder.
 
 ### Version of package in this repository
 robotframework                 |	5.0.1 <br/>
@@ -18,6 +18,7 @@ normal command: robot broke.robot
 run specific test case in test suite: robot -t "tc-001*" .\broke.robot
 keep the result inside folder Results: robot -d .\Results\ '.\web automation\eBay\basicSearch.robot' 
 Specify variable: robot -d .\Results\ -v env:uat '.\web automation\eBay\basicSearch.robot' 
+robot -d .\Results\ -v url:www.google.com -v browser:firefox '.\web automation\eBay\basicSearch.robot' 
 ```
 
 ### Web automation
@@ -47,6 +48,7 @@ Specify variable: robot -d .\Results\ -v env:uat '.\web automation\eBay\basicSea
 > The idea of `POM` is to seperate common functions following pages or navigation to use with many places.<br/>
 > The commonFunctionality.robot is common functions that can use for all test suites like open and close browser.
 </details>
+- basicSearch.robot use varaible file from ./Resources/WebElements.py and `POM` pattern by seperate into HeaderPage.robot and SearchResultsPage.robot and get parameter arguments from Keywords section.
 
 <details>
   <summary>DemoQA</summary>
