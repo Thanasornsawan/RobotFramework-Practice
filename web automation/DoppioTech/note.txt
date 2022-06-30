@@ -1,0 +1,30 @@
+ROBOCOP เป็นเหมือนตัวช่วยตรวจสอบว่า code ที่เราเขียนถูก Format หรือไม่
+วิธีติดตั้งและ download robocop
+Download ไฟล์ robocop.cfg
+ติดตั้งโดยใช้คำสั่ง pip install robotframework-robocop
+เช็คว่าติดตั้งหรือยังด้วยคำสั่ง pip list
+ถ้าติดตั้งเรียบร้อยต้องขึ้น Package ชื่อ robotframework-robocop
+วิธี run robocop
+5.1	เข้าไปที่ directory ของไฟล์ที่เราต้องการตรวจ format
+5.2	พิมพ์คำสั่ง robocop -A  pathที่เก็บไฟล์ robocop.cfg ชื่อไฟล์ที่ต้องการตรวจformat
+robocop -A ~/Desktop/robocop.cfg  .
+5.3 	จะได้ผลลัพธ์ตามในภาพ    6.อ่านเพิ่มเติมได้ที่ https://robocop.readthedocs.io/en/stable/rules.html
+หรือ run robocop ด้วยคำสั่ง robocop . ก็ได้ค่ะ จะเป็นการ run ทุกไฟล์
+========================================
+Android
+cd %ANDROID_HOME%
+cd platform-tools
+adb devices
+<open app that we want to check in emulator> then adb shell
+dumpsys activity activities | grep mResumedActivity
+=====================================
+Comments
+* Move all the Library and Resource  to the import.robot
+* Feature / Page files don't need to import library or other resource files (even import.robot) because the test case will do it
+* Merge splitstring.robot with common.robot since we don't need to have 1 file for 1 keyword
+* Verify categories keyword should have argument ${list_search_texts} for the generic and reusable purpose
+Example of what should be set as a global variable
+- Configuration, Value which shared among tests such as shared token id
+Example of what should n't be set as a global variable
+- Value from a keyword
+- Something that can be use only for a test case

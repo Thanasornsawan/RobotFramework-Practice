@@ -1,0 +1,39 @@
+Computer_categories:
+  advice: https://shopee.co.th/adviceit_officialshop
+  asus: https://shopee.co.th/asus_officialstore
+  hp: https://shopee.co.th/online_hp
+  huawei: https://shopee.co.th/huawei_official_store
+  itcity: https://shopee.co.th/itcity
+  lenovo: https://shopee.co.th/lenovothailand
+  logi: https://shopee.co.th/logi.shop
+  microsoft: https://shopee.co.th/microsoftofficial
+  razer: https://shopee.co.th/razer.official.store
+  seagate: https://shopee.co.th/seagate_th
+  steelseries: https://shopee.co.th/steelseries_official_store
+  tplink: https://shopee.co.th/tplink_thailand
+SortBy:
+  Latest: ctime
+  Popular: pop
+  Price: price
+  Top_Sales: sales
+categories:
+- Men Clothes
+- Mobile & Gadgets
+- Health & Wellness
+- Watches & Glasses
+- Men Shoes
+- Computers & Laptops
+- Cameras
+- Sports & Outdoors
+- Home Entertainment
+- Gaming & Hobbies
+- Women Clothes
+- Beauty & Personal Care
+- Baby & Toys
+- Home & Living
+- Bags
+- Women Shoes
+- Fashion Accessories
+- Food & Beverages
+- Home Appliances
+- Pets

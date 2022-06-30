@@ -1,0 +1,39 @@
+categories:
+  - Men Clothes
+  - Mobile & Gadgets
+  - Health & Wellness
+  - Watches & Glasses
+  - Men Shoes
+  - Computers & Laptops
+  - Cameras
+  - Sports & Outdoors
+  - Home Entertainment 
+  - Gaming & Hobbies
+  - Women Clothes
+  - Beauty & Personal Care
+  - Baby & Toys
+  - Home & Living
+  - Bags
+  - Women Shoes
+  - Fashion Accessories
+  - Food & Beverages
+  - Home Appliances
+  - Pets
+Computer_categories:
+  itcity: IT City
+  microsoft: Microsoft
+  seagate: SEAGATE
+  advice: Advice
+  asus: ASUS
+  razer: Razer
+  hp: HP
+  steelseries: Steel Series
+  logi: logitech
+  lenovo: Lenovo
+  huawei: Huawei
+  tplink: TP Link
+SortBy:
+  Popular: pop
+  Latest: ctime
+  Top_Sales: sales
+  Price: price

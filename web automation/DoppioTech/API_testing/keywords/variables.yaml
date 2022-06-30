@@ -1,0 +1,23 @@
+HOST: http://localhost:8082
+session_name: assetSession
+unauthorized_status:  '401'
+authorized_status:  '200'
+invalid_cred:
+  username: doppio222
+  password: 12345
+invalid_headers:
+  token:  '123'
+data:
+  assetId:  a93c
+  assetName:  Macpro m2
+  assetType:  1
+  inUse:  True
+login_path: /login
+asset_path: /assets
+token_error:  you do not have access to this resource
+login_error:  invalid username or password
+id_not_found_error: cannot find this id in database
+dupplicate_id_error: 'id : assetId is already exists , please try with another id'
+success:  success
+failed: failed
+error:  error

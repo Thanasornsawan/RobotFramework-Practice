@@ -1,0 +1,25 @@
+url:  https://shopee.co.th/
+browser:  Chrome
+language_popup_locator: xpath=//button[contains(text(),'language')]
+advertise_popup:  xpath=//shopee-banner-popup-stateful
+advertise_popup_close_btn_locator: dom:document.querySelector('shopee-banner-popup-stateful').shadowRoot.querySelector("[class*=close-btn]")
+categories_locator: xpath=//div[@class='shopee-header-section__header__title' and contains(text(),'Categories')]
+categories_sidebar_locator: xpath=//div[@class='shopee-category-list']
+topic_locator:  xpath=//a[@class='home-category-list__category-grid' and contains(@href,'/topic')]
+computer_categories_locator:  xpath=//a[@class='ofs-carousel__shop-cover-image' and contains(@href,'label')]
+sort_by_locator:  xpath=//span[@class='shopee-sort-bar__label' and contains(text(),'Sort by')]
+price_locator: xpath=//div[@class='select-with-status']//span[contains(text(),'Price')]
+pop_locator: xpath=//div[contains(@class,'shopee-sort-by-options') and contains(text(),'Popular')]
+top_locator: xpath=//div[contains(@class,'shopee-sort-by-options') and contains(text(),'Top Sales')]
+latest_locator: xpath=//div[contains(@class,'shopee-sort-by-options') and contains(text(),'Latest')]
+price_dropdown_locator: xpath=//div[contains(@class,'select-with-status__dropdown-item') and contains(text(),'label')]
+product_result_locator: xpath=//div[@class='row shopee-search-item-result__items']
+search_result3_locator: xpath=//div[contains(@class,'shopee-search-item-result__item')]/div[3]/a[contains(@href='เมาส์ไร้สาย MI')]
+see_all_locator: xpath=//a[@class='ofs-carousel__header-right']/div[contains(text(),'See All')]
+see_all_url:  xpath=//a[@class='ofs-carousel__header-right']
+seller_profile_locator: xpath=//h1[@class='section-seller-overview-horizontal__portrait-name'] 
+alphabet_locator: xpath=//div[@class='official-shop-brand-list__alphabet-list']//div[not(contains(@class,'official-shop-brand-list__alphabet-letter--disabled'))]
+brand_name_locator: xpath=//div[@class='official-shop-brand-list__section-name' and contains(text(), 'alphabet')]/following-sibling::div//div[@class='full-brand-list-item__brand-name']
+brand_name_url_locator: xpath=//a[@class='full-brand-list-item__brand-cover-image'  and contains(@href,'url')]
+data_path:  '${CURDIR}/../web5_assignment/keywords/utils/data.yaml'
+new_data_path: '${CURDIR}/../web5_assignment/keywords/utils/newdata.yaml'

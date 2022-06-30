@@ -1,0 +1,13 @@
+url:  http://localhost:4723/wd/hub
+device_name:  Test Device
+platform_version: '11.0'
+platform_name:  Android
+package_name: com.material.components
+activity_name:  com.material.components.activity.MainMenu
+close_popup_locator:  id=com.material.components:id/bt_close
+expansion_dropdown_locator: android=UiSelector().className("android.widget.TextView").text("Expansion Panels")
+basic_locator:  android=UiSelector().className("android.widget.TextView").text("Basic")
+basic_locator:  android=UiSelector().className("android.widget.TextView").text("Basic")
+input_dropdown_locator: id=com.material.components:id/bt_toggle_input
+female_radio_locator: android=UiSelector().className("android.widget.RadioButton").text("Female")
+save_btn_locator: id=com.material.components:id/bt_save_input
