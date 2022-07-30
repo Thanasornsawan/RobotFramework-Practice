@@ -1,0 +1,18 @@
+# # Setting for Android Emulator
+GLOBAL_TIMEOUT                    : 20
+automation                        : UiAutomator2
+remoteUrl                         : http://127.0.0.1:4723/wd/hub
+platformVersion                   : '12'
+platformName                      : Android
+deviceName                        : emulator-5554
+udid                              : emulator-5554
+systemPort                        : 8201
+defaultScrollView                 : class=android.widget.ScrollView
+swipeLongScroll                   : 0.8
+appPackage                        : com.material.components
+appActivity                       : com.material.components.activity.MainMenu
+noWaitTimeout                     : 0s
+shortTimeout                      : 5s
+halfTimeout                       : 30s
+longTimeout                       : 60s
+brieftimeout                      : 1s

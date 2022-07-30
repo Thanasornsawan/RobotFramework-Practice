@@ -109,3 +109,6 @@ Execution time fast-slow: Accessibility ID > ID > (UISelector, Xpath)
 - [https://testautomationpractice.blogspot.com/](https://testautomationpractice.blogspot.com/)
 - [https://www.saucedemo.com/](https://www.saucedemo.com/)
 - [https://www.softwaretestingmentor.com/category/](https://www.softwaretestingmentor.com/category/)
+
+### Recommend vs-code plugin for robot framework project
+![vscode plugin](https://github.com/Thanasornsawan/RobotFramework-Practice/blob/main/images/vscode_plugin.png?raw=true)
